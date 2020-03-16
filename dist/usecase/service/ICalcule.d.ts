@@ -1,4 +1,4 @@
 import People from "src/domain/model/People";
-export default interface IPeople {
-    create(people: People): Promise<any>;
+export default interface ICalcule {
+    execute(people: People): Promise<any>;
 }

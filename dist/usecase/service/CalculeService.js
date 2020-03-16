@@ -19,8 +19,8 @@ let CalculeService = class CalculeService {
     constructor(repository) {
         this.repository = repository;
     }
-    async create(people) {
-        return await this.repository.execute(people);
+    async execute(people) {
+        return await this.repository.create(people);
     }
 };
 CalculeService = __decorate([

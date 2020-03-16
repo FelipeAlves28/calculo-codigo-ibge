@@ -13,17 +13,15 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const People_1 = require("../../domain/model/People");
 const roit_response_handler_1 = require("@roit/roit-response-handler");
-const IPeople_1 = require("../../usecase/service/IPeople");
-const IDbCalcule_1 = require("../../infrastructure/database/IDbCalcule");
+const ICalcule_1 = require("../../usecase/service/ICalcule");
 let CalculeController = class CalculeController {
     constructor(calculator) {
         this.calculator = calculator;
     }
     async calcule(body) {
         console.log(body);
-        let response = await this.calculator.create(body);
+        let response = await this.calculator.execute(body);
         return roit_response_handler_1.OkResponse(response, 'Success !');
     }
 };

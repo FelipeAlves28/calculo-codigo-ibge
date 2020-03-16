@@ -901,17 +901,17 @@
         "version": "382194aa7111795501106422c577ba84121dd296d3de7536859a021d8ef64ee3",
         "signature": "30da7bfbf152c7296164793f2059a7d9e66e05a488658e0587de3196160d3c76"
       },
-      "../src/usecase/service/IPeople.ts": {
-        "version": "009d55c73ea5792a4708bb40fd5b1b7a1e701ff5922337c33df6c58ee6324e36",
-        "signature": "443f026d386dc9727186f88721e45c64a8dc1e8d2b0ffb1ba191c065a1660aa9"
+      "../src/usecase/service/ICalcule.ts": {
+        "version": "1c7732e33a1d41c821922447841d0ab9de5f2773b9a7f2aad2dbe721dce3f101",
+        "signature": "119a92ec66af384cb6a2f566f72b819c0ff09190bd5436eaa9576b50625676aa"
       },
       "../src/infrastructure/database/IDbCalcule.ts": {
         "version": "64e8a81dbfe1a05b0e4d8cea2654792bb7314851839948dabb9f599ca8d8bddd",
         "signature": "afd8b055f83cbb68e28227fa35282beaf6bad8df4609212409fa32be953a9308"
       },
       "../src/usecase/service/CalculeService.ts": {
-        "version": "050c3b9a163f63ee3ed2678ffa8c2a95c7686353cd6b75c295bd644186da473a",
-        "signature": "d04a45d1667418ea98b7dfcab93be6c10efac21e4256dc526587bab679c28ef9"
+        "version": "3b673458a85a32a26c5cf21c9d34bef82e60229776fe1433ddea416e18b72ab5",
+        "signature": "39b4940cf407e504f18c1f310417e000f9dcd9c936a5030dfc3d83a7f73b47ee"
       },
       "../node_modules/@types/node/globals.d.ts": {
         "version": "facd846e52d080629af96d24241b95fdf1472bf77a9f5c447f6b7f7214142d5e",
@@ -1153,8 +1153,8 @@
         "version": "338586fd08eb181d9a60cade26c62bc88163596d8ecdc345a993259ed84f2538"
       },
       "../src/presentation/controllers/CalculeController.ts": {
-        "version": "189d29f973cf5f691d7f127c0bfa671ea78e860622e5d72267bc07921c3e13ca",
-        "signature": "69cb36da3ede4c67fa17bfe35abd54a6dff61fea51d7e618b036c0e7c910f5b7"
+        "version": "50e3a55a55a86318fed5a44093475caad576bd26317046f13b3533c53e72300b",
+        "signature": "fb2485ede7ec138192cb5172bca7142d717330dd326163773daec3ca0aa5fd3a"
       },
       "../src/infrastructure/database/DbCalcule.ts": {
         "version": "5541fc294a5835d55061a963cf59b81147b8188170131312b373e180dfc9c3c1",
@@ -3257,7 +3257,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/usecase/service/IPeople.ts": [
+      "../src/usecase/service/ICalcule.ts": [
         "../src/domain/model/People.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -3274,7 +3274,7 @@
       "../src/usecase/service/CalculeService.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/domain/model/People.ts",
-        "../src/usecase/service/IPeople.ts",
+        "../src/usecase/service/ICalcule.ts",
         "../src/infrastructure/database/IDbCalcule.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -3776,10 +3776,8 @@
       ],
       "../src/presentation/controllers/CalculeController.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../src/domain/model/People.ts",
         "../node_modules/@roit/roit-response-handler/src/index.ts",
-        "../src/usecase/service/IPeople.ts",
-        "../src/infrastructure/database/IDbCalcule.ts",
+        "../src/usecase/service/ICalcule.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -6168,13 +6166,13 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/usecase/service/IPeople.ts": [
+      "../src/infrastructure/database/IDbCalcule.ts": [
         "../src/domain/model/People.ts"
       ],
       "../src/usecase/service/CalculeService.ts": [
-        "../src/usecase/service/IPeople.ts",
+        "../src/infrastructure/database/IDbCalcule.ts",
         "../src/domain/model/People.ts",
-        "../src/infrastructure/database/IDbCalcule.ts"
+        "../src/usecase/service/ICalcule.ts"
       ],
       "../node_modules/@types/node/globals.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
@@ -6600,6 +6598,10 @@
       ],
       "../src/presentation/controllers/CalculeController.ts": [
         "../node_modules/@roit/roit-response-handler/src/ResponseModel.ts",
+        "../src/usecase/service/ICalcule.ts"
+      ],
+      "../src/infrastructure/database/DbCalcule.ts": [
+        "../src/domain/model/People.ts",
         "../src/infrastructure/database/IDbCalcule.ts"
       ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
@@ -7181,12 +7183,8 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/infrastructure/database/IDbCalcule.ts": [
+      "../src/usecase/service/ICalcule.ts": [
         "../src/domain/model/People.ts"
-      ],
-      "../src/infrastructure/database/DbCalcule.ts": [
-        "../src/domain/model/People.ts",
-        "../src/infrastructure/database/IDbCalcule.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
