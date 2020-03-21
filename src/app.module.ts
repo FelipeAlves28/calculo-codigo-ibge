@@ -1,6 +1,6 @@
-import { Module } from '@nestjs/common';
+import { Module, HttpModule } from '@nestjs/common';
 import { CalculeIbgeCreatedService } from './usecase/service/CalculeIbgeCreatedService';
-import  {CalculeIbgeCreatedController }  from './presentation/controllers/CalculeIbgeCreatedController';
+import { CalculeIbgeCreatedController } from './presentation/controllers/CalculeIbgeCreatedController';
 import { CalculeIbgeCreatedRepository } from './infrastructure/repository/CalculeIbgeCreatedRepository';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CalculeIbgeSchema } from './infrastructure/schemas/CalculeIbgeSchema';
@@ -16,11 +16,17 @@ import CalculeIbgeFindByIdService from './usecase/service/CalculeIbgeFindByIdSer
 import CalculeIbgeUpdateRepository from './infrastructure/repository/CalculeIbgeUpdateRepository';
 import CalculeIbgeUpdateService from './usecase/service/CalculeIbgeUpdateService';
 import CalculeIbgeUpdateController from './presentation/controllers/CalculeIbgeUpdateController';
+import InfoIbgeService from './usecase/service/InfoIbgeService';
+
 @Module({
   imports: [MongooseModule.forRoot('mongodb+srv://db_user:frm6L8YM3zRU4gCZ@cluster0-u6so4.gcp.mongodb.net/calcule-ibge?retryWrites=true&w=majority'),
-  MongooseModule.forFeature([{ name: 'People', schema: CalculeIbgeSchema }])],
-  controllers: [CalculeIbgeCreatedController, CalculeIbgeFindAllController, 
-    CalculeIbgeDeleteController,CalculeIbgeFindByIdController, CalculeIbgeUpdateController],
+  MongooseModule.forFeature([{ name: 'People', schema: CalculeIbgeSchema }]),
+  HttpModule.register({
+    timeout: 5000,
+    maxRedirects: 5,
+  }),],
+  controllers: [CalculeIbgeCreatedController, CalculeIbgeFindAllController,
+    CalculeIbgeDeleteController, CalculeIbgeFindByIdController, CalculeIbgeUpdateController],
   providers: [
     {
       provide: 'CalculeService',
@@ -61,6 +67,10 @@ import CalculeIbgeUpdateController from './presentation/controllers/CalculeIbgeU
     {
       provide: 'CalculeIbgeUpdateService',
       useClass: CalculeIbgeUpdateService
+    },
+    {
+      provide: 'InfoIbge',
+      useClass: InfoIbgeService
     }
   ],
 })
