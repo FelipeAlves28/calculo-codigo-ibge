@@ -2,7 +2,7 @@ import { Controller, Inject, Post, Body } from '@nestjs/common';
 import { OkResponse, ErrorResponse } from "@roit/roit-response-handler";
 import ICalculeIbgeCreated from 'src/usecase/service/interface/ICalculeIbgeCreated';
 
-@Controller('rules')
+@Controller('created')
 export class CalculeIbgeCreatedController {
  
   constructor(
@@ -11,8 +11,7 @@ export class CalculeIbgeCreatedController {
     @Post()
     async calcule(@Body() body: any){
 
-      let response = await this.service.execute(body);
-      return OkResponse(response, 'Success !');
+      return await this.service.execute(body);
     }
   
 }

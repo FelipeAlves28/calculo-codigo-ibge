@@ -13,15 +13,13 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const roit_response_handler_1 = require("@roit/roit-response-handler");
 const ICalculeIbgeCreated_1 = require("../../usecase/service/interface/ICalculeIbgeCreated");
 let CalculeIbgeCreatedController = class CalculeIbgeCreatedController {
     constructor(service) {
         this.service = service;
     }
     async calcule(body) {
-        let response = await this.service.execute(body);
-        return roit_response_handler_1.OkResponse(response, 'Success !');
+        return await this.service.execute(body);
     }
 };
 __decorate([
@@ -32,7 +30,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], CalculeIbgeCreatedController.prototype, "calcule", null);
 CalculeIbgeCreatedController = __decorate([
-    common_1.Controller('rules'),
+    common_1.Controller('created'),
     __param(0, common_1.Inject('CalculeService')),
     __metadata("design:paramtypes", [Object])
 ], CalculeIbgeCreatedController);

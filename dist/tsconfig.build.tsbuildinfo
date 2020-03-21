@@ -1165,8 +1165,8 @@
         "version": "338586fd08eb181d9a60cade26c62bc88163596d8ecdc345a993259ed84f2538"
       },
       "../src/presentation/controllers/CalculeIbgeCreatedController.ts": {
-        "version": "92071413d666d67ec2db6ed5960a4a13e05cefbb9d572ab9be9875e705852a96",
-        "signature": "b7c288eb52e88acc801f6ad17b3a8efebe5d09824d728b04028b796b4dd384ed"
+        "version": "34e47e21fe5b3178ca468e1223a6479125025528869495ff4ff27e7f196d5d38",
+        "signature": "37bc9d093e3000e561ed528181618777dab360faaf8bf55b1d4bff7abb2df4c6"
       },
       "../node_modules/@nestjs/mongoose/dist/common/mongoose.decorators.d.ts": {
         "version": "d6f8f5677b0e4076ff30fb38cefe5739f3247f4a311081a83aac4a7996b2224b",
@@ -7059,7 +7059,6 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../src/presentation/controllers/CalculeIbgeCreatedController.ts": [
-        "../node_modules/@roit/roit-response-handler/src/ResponseModel.ts",
         "../src/usecase/service/interface/ICalculeIbgeCreated.ts"
       ],
       "../node_modules/@nestjs/mongoose/dist/common/mongoose.decorators.d.ts": [
@@ -8078,7 +8077,6 @@
       "../node_modules/@roit/roit-response-handler/src/errors/BusinessError.ts",
       "../node_modules/@roit/roit-response-handler/src/errors/SystemError.ts",
       "../node_modules/@roit/roit-response-handler/src/index.ts",
-      "../src/presentation/controllers/CalculeIbgeCreatedController.ts",
       "../node_modules/@nestjs/mongoose/dist/common/mongoose.decorators.d.ts",
       "../node_modules/@nestjs/mongoose/dist/common/mongoose.utils.d.ts",
       "../node_modules/@nestjs/mongoose/dist/common/index.d.ts",
@@ -8111,6 +8109,7 @@
       "../src/usecase/service/interface/ICalculeIbgeUpdate.ts",
       "../src/usecase/service/CalculeIbgeUpdateService.ts",
       "../src/presentation/controllers/CalculeIbgeUpdateController.ts",
+      "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -8185,7 +8184,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/app.module.ts"
+      "../src/presentation/controllers/CalculeIbgeCreatedController.ts"
     ]
   },
   "version": "3.8.3"
