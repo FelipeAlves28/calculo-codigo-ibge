@@ -1,8 +1,8 @@
 import { Injectable, HttpService } from '@nestjs/common';
-import ICalculeIbgeFindAll from './interface/ICalculeIbgeFindAll';
+import ICalculeIbgeFindAll from '../usecase/service/interface/ICalculeIbgeFindAll';
 
 @Injectable()
-export default class InfoIbgeService implements ICalculeIbgeFindAll {
+export default class InfoIbge implements ICalculeIbgeFindAll {
   constructor(private httpService: HttpService) { }
   
   execute(): Promise<any> {

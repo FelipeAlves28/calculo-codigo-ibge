@@ -16,7 +16,7 @@ import CalculeIbgeFindByIdService from './usecase/service/CalculeIbgeFindByIdSer
 import CalculeIbgeUpdateRepository from './infrastructure/repository/CalculeIbgeUpdateRepository';
 import CalculeIbgeUpdateService from './usecase/service/CalculeIbgeUpdateService';
 import CalculeIbgeUpdateController from './presentation/controllers/CalculeIbgeUpdateController';
-import InfoIbgeService from './usecase/service/InfoIbgeService';
+import InfoIbge from './utils/InfoIbge';
 
 @Module({
   imports: [MongooseModule.forRoot('mongodb+srv://db_user:frm6L8YM3zRU4gCZ@cluster0-u6so4.gcp.mongodb.net/calcule-ibge?retryWrites=true&w=majority'),
@@ -70,7 +70,7 @@ import InfoIbgeService from './usecase/service/InfoIbgeService';
     },
     {
       provide: 'InfoIbge',
-      useClass: InfoIbgeService
+      useClass: InfoIbge
     }
   ],
 })
