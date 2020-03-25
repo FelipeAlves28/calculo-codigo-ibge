@@ -16,10 +16,11 @@ export class TreatApiIbge {
   }
 
   public async mountObjectCalculate(people: People, codigoIbge: []) {
-    let cpf = people.cpf.slice(9, 11)
+    let cpf = JSON.stringify(people.cpf);
+    cpf = cpf.charAt(people.cpf.length-1) + cpf.charAt(people.cpf.length);
+
     people.calculo = new Array
 
-    let test = new Array
     codigoIbge.forEach(function (elem) {
       let codeIbge = JSON.stringify(elem).split('"', 30).toString()
         .split('id', 20).toString()

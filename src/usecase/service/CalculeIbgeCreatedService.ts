@@ -4,7 +4,6 @@ import IDbCalculeCreated from 'src/infrastructure/repository/interface/IDbCalcul
 import ICalculeIbgeCreated from './interface/ICalculeIbgeCreated';
 import { TreatApiIbge } from '../../utils/TreatApiIbge';
 import InfoIbge from '../../utils/InfoIbge';
-
 @Injectable()
 export class CalculeIbgeCreatedService implements ICalculeIbgeCreated {
 
@@ -13,7 +12,6 @@ export class CalculeIbgeCreatedService implements ICalculeIbgeCreated {
 
   async execute(people: People) {
     TreatApiIbge.getInstance().mountObjectCalculate(people, await this.infoIbge.execute());
-
     return await this.repository.create(people);
   }
 
