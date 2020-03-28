@@ -11,7 +11,7 @@ export default class CalculatorIbge{
       return CalculatorIbge.instance;
     }
 
-    public calculate(cpf: any, codeIbge: any) {
+    public calculate(cpf: number, codeIbge: number) {
         let result =  codeIbge * cpf;
         return result;
     }
