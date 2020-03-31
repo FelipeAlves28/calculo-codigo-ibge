@@ -3,14 +3,14 @@ import ICalculeIbgeCreated from 'src/usecase/service/interface/ICalculeIbgeCreat
 
 @Controller('created')
 export class CalculeIbgeCreatedController {
- 
+
   constructor(
-    @Inject('CalculeService') private readonly service: ICalculeIbgeCreated ) { }
+    @Inject('CalculeService') private readonly service: ICalculeIbgeCreated) { }
 
-    @Post()
-    async calcule(@Body() body: any){
+  @Post()
+  async calcule(@Body() payload: any) {
 
-      return await this.service.execute(body);
-    }
-  
+    return await this.service.execute(payload);
+  }
+
 }

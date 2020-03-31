@@ -1,3 +1,3 @@
-export default interface ICalculeIbgeDelete{
-    execute(id:string):Promise<any>
+export default interface ICalculeIbgeDelete {
+    execute(id: string): Promise<any>
 }

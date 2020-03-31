@@ -12,7 +12,8 @@ export class CalculeIbgeCreatedService implements ICalculeIbgeCreated {
 
   async execute(people: People) {
     TreatApiIbge.getInstance().mountObjectCalculate(people, await this.infoIbge.execute());
-    return await this.repository.create(people);
+    // return await this.repository.create(people);
+    return people
   }
 
 }

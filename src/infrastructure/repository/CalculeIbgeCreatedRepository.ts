@@ -6,7 +6,7 @@ export class CalculeIbgeCreatedRepository implements IDbCalculeCreated {
     constructor(@InjectModel('People') private readonly repository: Model<People>) { }
 
     async create(people: People): Promise<any> {
-        
+
         const createdPeople = new this.repository(people);
         return await createdPeople.save();
     }

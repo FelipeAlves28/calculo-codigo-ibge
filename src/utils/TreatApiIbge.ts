@@ -1,6 +1,6 @@
 import People from "src/domain/model/People";
 import Constants from "src/utils/Constants";
-import CalculatorIbge from "./CalculatorIbge";
+import CalculateLastTwoDigitCpf from "./CalculateLastTwoDigitCpf";
 
 export class TreatApiIbge {
 
@@ -17,7 +17,7 @@ export class TreatApiIbge {
 
   public async mountObjectCalculate(people: People, codigoIbge: []) {
     let cpf = JSON.stringify(people.cpf);
-    cpf = cpf.charAt(people.cpf.length-1) + cpf.charAt(people.cpf.length);
+    cpf = cpf.charAt(people.cpf.length - 1) + cpf.charAt(people.cpf.length);
 
     people.calculo = new Array
 
@@ -26,7 +26,7 @@ export class TreatApiIbge {
         .split('id', 20).toString()
         .split('municipio', 2).toString().slice(5, 12).toString()
 
-      let calcule = CalculatorIbge.getInstance().calculate(parseInt(codeIbge), parseInt(cpf));
+      let calcule = CalculateLastTwoDigitCpf.getInstance().calculeIbge(parseInt(codeIbge), parseInt(cpf));
       let arrayNameCity = JSON.stringify(elem);
       let nameCity = arrayNameCity.split('"', 30).toString()
         .split('id', 20).toString()
@@ -41,6 +41,6 @@ export class TreatApiIbge {
       }
 
       people.calculo.push(object);
-    })   
+    })
   }
 }

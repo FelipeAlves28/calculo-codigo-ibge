@@ -1,3 +1,3 @@
-export default interface ICalculeIbgeFindById{
-    execute(id:string):Promise<any>
+export default interface ICalculeIbgeFindById {
+    execute(id: string): Promise<any>
 }

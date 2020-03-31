@@ -1,3 +1,3 @@
-export default interface ICalculeFindAll{
-    execute():Promise<any>
+export default interface ICalculeFindAll {
+    execute(): Promise<any>
 }

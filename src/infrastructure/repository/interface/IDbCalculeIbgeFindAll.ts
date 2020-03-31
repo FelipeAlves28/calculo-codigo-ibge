@@ -1,3 +1,3 @@
-export default interface IDbCalculeFindAll{
-    findAll():Promise<any>
+export default interface IDbCalculeFindAll {
+    findAll(): Promise<any>
 }
