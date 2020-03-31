@@ -2,7 +2,7 @@ import { Controller, Inject, Post, Body } from '@nestjs/common';
 import ICalculeIbgeCreated from 'src/usecase/service/interface/ICalculeIbgeCreated';
 
 @Controller('created')
-export class CalculeIbgeCreatedController {
+export default class CalculeIbgeCreatedController {
 
   constructor(
     @Inject('CalculeService') private readonly service: ICalculeIbgeCreated) { }

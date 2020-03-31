@@ -5,7 +5,7 @@ import ICalculeIbgeCreated from './interface/ICalculeIbgeCreated';
 import { TreatApiIbge } from '../../utils/TreatApiIbge';
 import InfoIbge from '../../utils/InfoIbge';
 @Injectable()
-export class CalculeIbgeCreatedService implements ICalculeIbgeCreated {
+export default class CalculeIbgeCreatedService implements ICalculeIbgeCreated {
 
   constructor(@Inject('CalculeIbgeCreatedRepository') private readonly repository: IDbCalculeCreated,
     @Inject('InfoIbge') private readonly infoIbge: InfoIbge) { }

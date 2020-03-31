@@ -1,6 +1,6 @@
 import People from "src/domain/model/People";
-import Constants from "src/utils/Constants";
 import CalculateLastTwoDigitCpf from "./CalculateLastTwoDigitCpf";
+import { Formula } from "src/domain/model/enum/Formula";
 
 export class TreatApiIbge {
 
@@ -37,7 +37,7 @@ export class TreatApiIbge {
         code: codeIbge,
         city: nameCity,
         calculation: calcule,
-        formula: Constants.FORMULA
+        formula: Formula.DOIS_ULTIMOS_CPF
       }
 
       people.calculo.push(object);

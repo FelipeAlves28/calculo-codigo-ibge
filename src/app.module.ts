@@ -1,9 +1,9 @@
 import { Module, HttpModule } from '@nestjs/common';
-import { CalculeIbgeCreatedService } from './usecase/service/CalculeIbgeCreatedService';
-import { CalculeIbgeCreatedController } from './presentation/controllers/CalculeIbgeCreatedController';
-import { CalculeIbgeCreatedRepository } from './infrastructure/repository/CalculeIbgeCreatedRepository';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CalculeIbgeSchema } from './infrastructure/schemas/CalculeIbgeSchema';
+import CalculeIbgeCreatedService from './usecase/service/CalculeIbgeCreatedService';
+import CalculeIbgeCreatedController from './presentation/controllers/CalculeIbgeCreatedController';
+import CalculeIbgeCreatedRepository from './infrastructure/repository/CalculeIbgeCreatedRepository';
 import CalculeIbgeFindAllRepository from './infrastructure/repository/CalculeIbgeFindAllRepository';
 import CalculeIbgeFindAllController from './presentation/controllers/CalculeIbgeFindAllController';
 import CalculeIbgeFindAllService from './usecase/service/CalculeIbgeFIndAllService';
