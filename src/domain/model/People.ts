@@ -1,10 +1,10 @@
 import { Document } from 'mongoose';
-import Calculo from './Calculo';
+import Calcule from './Calcule';
 export default class People extends Document {
 
     name: string
     cpf: string
     completed: boolean
-    calculo: Array<Calculo>
+    calcule: Array<Calcule>
 
 }

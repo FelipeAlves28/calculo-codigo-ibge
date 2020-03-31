@@ -15,32 +15,32 @@ export class TreatApiIbge {
     return TreatApiIbge.instance;
   }
 
-  public async mountObjectCalculate(people: People, codigoIbge: []) {
+  public mountObjectCalculate(people: People, codeIbge: []) {
     let cpf = JSON.stringify(people.cpf);
     cpf = cpf.charAt(people.cpf.length - 1) + cpf.charAt(people.cpf.length);
 
-    people.calculo = new Array
+    people.calcule = new Array
 
-    codigoIbge.forEach(function (elem) {
-      let codeIbge = JSON.stringify(elem).split('"', 30).toString()
+    codeIbge.forEach(function (elem) {
+      let code = JSON.stringify(elem).split('"', 30).toString()
         .split('id', 20).toString()
-        .split('municipio', 2).toString().slice(5, 12).toString()
+        .split('municipio', 2).toString().slice(5, 12).toString();
 
-      let calcule = CalculateLastTwoDigitCpf.getInstance().calculeIbge(parseInt(codeIbge), parseInt(cpf));
+      let calculeIbge = CalculateLastTwoDigitCpf.getInstance().calculeIbge(parseInt(code), parseInt(cpf));
       let arrayNameCity = JSON.stringify(elem);
       let nameCity = arrayNameCity.split('"', 30).toString()
         .split('id', 20).toString()
         .split('municipio', 1).toString()
-        .slice(23, 45).toLocaleUpperCase().replace(",,,", " ")
+        .slice(23, 45).toLocaleUpperCase().replace(",,,", " ");
 
       let object = {
-        code: codeIbge,
+        codeIbge: code,
         city: nameCity,
-        calculation: calcule,
+        calculation: calculeIbge,
         formula: Formula.DOIS_ULTIMOS_CPF
       }
 
-      people.calculo.push(object);
+      people.calcule.push(object);
     })
   }
 }
