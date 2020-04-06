@@ -16,6 +16,7 @@ export class TreatApiIbge {
   }
 
   public mountObjectCalculate(people: People, codeIbge: []) {
+
     let cpf = JSON.stringify(people.cpf);
     cpf = cpf.charAt(people.cpf.length - 1) + cpf.charAt(people.cpf.length);
 
@@ -40,7 +41,7 @@ export class TreatApiIbge {
         formula: Formula.DOIS_ULTIMOS_CPF
       }
 
-      people.calcule.push(object);
+      people.calcule.push(object)
     })
   }
 }

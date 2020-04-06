@@ -1,5 +1,5 @@
-import ICalculeIbge from '../utils/interface/ICalculeIbge';
-export default class CalculateLastTwoDigitCpf implements ICalculeIbge {
+import ICalculator from './interface/ICalculator';
+export default class CalculateLastTwoDigitCpf implements ICalculator {
 
   private static instance: CalculateLastTwoDigitCpf;
 

@@ -1,21 +1,9 @@
 import { Module, HttpModule } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CalculeIbgeSchema } from './infrastructure/schemas/CalculeIbgeSchema';
-import CalculeIbgeCreatedService from './usecase/service/CalculeIbgeCreatedService';
-import CalculeIbgeCreatedController from './presentation/controllers/CalculeIbgeCreatedController';
-import CalculeIbgeCreatedRepository from './infrastructure/repository/CalculeIbgeCreatedRepository';
-import CalculeIbgeFindAllRepository from './infrastructure/repository/CalculeIbgeFindAllRepository';
-import CalculeIbgeFindAllController from './presentation/controllers/CalculeIbgeFindAllController';
-import CalculeIbgeFindAllService from './usecase/service/CalculeIbgeFIndAllService';
-import CalculeIbgeDeleteRepository from './infrastructure/repository/CalculeIbgeDeleteRepository';
-import CalculeIbgeDeleteController from './presentation/controllers/CalculeIbgeDeleteController';
-import CalculeIbgeDeleteService from './usecase/service/CalculeIbgeDeleteService';
-import CalculeIbgeFindByIdRepository from './infrastructure/repository/CalculeIbgeFindByIdRepository';
-import CalculeIbgeFindByIdController from './presentation/controllers/CalculeIbgeFindByIdController';
-import CalculeIbgeFindByIdService from './usecase/service/CalculeIbgeFindByIdService';
-import CalculeIbgeUpdateRepository from './infrastructure/repository/CalculeIbgeUpdateRepository';
-import CalculeIbgeUpdateService from './usecase/service/CalculeIbgeUpdateService';
-import CalculeIbgeUpdateController from './presentation/controllers/CalculeIbgeUpdateController';
+import { CalculeIbgeService } from './usecase/service/CalculeIbgeService';
+import { CalculeIbgeController } from './presentation/controllers/CalculeIbgeController';
+import { CalculeIbgeRepository } from './infrastructure/repository/CalculeIbgeRepository';
 import InfoIbge from './utils/InfoIbge';
 
 @Module({
@@ -25,48 +13,15 @@ import InfoIbge from './utils/InfoIbge';
     timeout: 5000,
     maxRedirects: 5,
   }),],
-  controllers: [CalculeIbgeCreatedController, CalculeIbgeFindAllController,
-    CalculeIbgeDeleteController, CalculeIbgeFindByIdController, CalculeIbgeUpdateController],
+  controllers: [CalculeIbgeController],
   providers: [
     {
-      provide: 'CalculeService',
-      useClass: CalculeIbgeCreatedService
+      provide: 'CalculeIbgeService',
+      useClass: CalculeIbgeService
     },
     {
-      provide: 'CalculeIbgeCreatedRepository',
-      useClass: CalculeIbgeCreatedRepository
-    },
-    {
-      provide: 'CalculeIbgeFindAllRepository',
-      useClass: CalculeIbgeFindAllRepository
-    },
-    {
-      provide: 'CalculeIbgeFindAllService',
-      useClass: CalculeIbgeFindAllService
-    },
-    {
-      provide: 'CalculeIbgeDeleteRepository',
-      useClass: CalculeIbgeDeleteRepository
-    },
-    {
-      provide: 'CalculeIbgeDeleteService',
-      useClass: CalculeIbgeDeleteService
-    },
-    {
-      provide: 'CalculeIbgeFindByIdRepository',
-      useClass: CalculeIbgeFindByIdRepository
-    },
-    {
-      provide: 'CalculeIbgeFindByIdService',
-      useClass: CalculeIbgeFindByIdService
-    },
-    {
-      provide: 'CalculeIbgeUpdateRepository',
-      useClass: CalculeIbgeUpdateRepository
-    },
-    {
-      provide: 'CalculeIbgeUpdateService',
-      useClass: CalculeIbgeUpdateService
+      provide: 'CalculeIbgeRepository',
+      useClass: CalculeIbgeRepository
     },
     {
       provide: 'InfoIbge',

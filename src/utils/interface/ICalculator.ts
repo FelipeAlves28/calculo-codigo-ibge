@@ -1,3 +1,3 @@
-export default interface ICalculeIbge {
+export default interface ICalculator {
     calculeIbge(cpf: number, codeIbge: number): number;
 }
